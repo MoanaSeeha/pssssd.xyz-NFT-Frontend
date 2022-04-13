@@ -1,27 +1,21 @@
+
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
-// pages
-import Home from "./pages/home";
-import NotFound from "./pages/not-found";
+import "./App.css";
+import Footer from "./pages/layout/footer";
+import Header from "./pages/layout/header";
+import Router from "./router";
 
-// style
-import "./styles/index.scss";
-import "react-toastify/dist/ReactToastify.css";
-
-const App: React.FC = () => {
+const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/not-found">
-          <NotFound />
-        </Route>
-        <Redirect to="/not-found" />
-      </Switch>
-    </BrowserRouter>
+    <div className="relative w-full">
+      <Header />
+      <ParallaxProvider>
+        <Router />
+      </ParallaxProvider>
+      <Footer />
+    </div>
   );
 };
 
