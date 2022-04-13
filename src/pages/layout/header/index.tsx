@@ -1,24 +1,23 @@
 import React from "react";
 
-import NormalNavbar from './NormalNavbar';
-import MobileNavbar from './MobileNavbar';
-
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
-
 const Header = () => {
   return (
-    <div className="cr-slauteblue-md border-b border-b-xs pt-2 fixed left-0 top-0 z-50 w-full font-sans items-center flex flex-wrap justify-between">
-      <div className=" items-center flex flex-wrap justify-between max-w-6xl mx-auto space-x-3 bg-inherit">
-      <img src={process.env.PUBLIC_URL + '/img/logo.png'} className="w-24 py-3 -mt-3 absolute left-3" alt="Logo" />
-        <NormalNavbar/>
-        <MobileNavbar/>
+    <div>
+      <nav className="nav fixed left-0 right-0 flex flex-row pr-4 sm:px-16 items-center z-50 uppercase text-sm">
+        <div className="hidden sm:inline sm:pl-32">PSSSSD Labs</div>
+        <div className="grow text-right">
+          <span className="dot"></span>
+          <span className="hidden md:inline">Current Status: </span>Tier 4 Emergency
+        </div>
+        <div className="mx-4">||||</div>
+        <a className="underline underline-offset-1" href="/connect">Connect</a>
+      </nav>
+      <div className="header fixed left-0 z-40 overflow-x-hidden">
+        <img src={`${process.env.PUBLIC_URL}/img/nav-QLRXPLVY.svg`} className="nav-img" alt="" />
       </div>
+      <img src={`${process.env.PUBLIC_URL}/img/logo-FDOECSF6.svg`} className="nav-logo fixed w-16 z-40" alt="logo"></img>
     </div>
-  );
-};
+  )
+}
 
 export default Header;
