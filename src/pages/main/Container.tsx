@@ -6,7 +6,7 @@ const Container = () => {
       <img src={`${process.env.PUBLIC_URL}/img/outbreak-pink-OMPBSBVI.svg`} className="banner banner-pink z-20"/>
       <div className="flex sm:flex-row flex-col w-[90%] my-5 mx-auto">
         <div className="md:flex md:items-center z-30 sm:w-1/2 w-full break-all flex justify-center">
-          <div>
+          <div className="heading">
             <h1 className="hero-heading uppercase">The Possessed
             <sup className="super"> NFT</sup></h1>
             <p className="text-center md:text-left">An innovative new NFT developed by PSSSSD Labs to enhance your creativity. <br/>

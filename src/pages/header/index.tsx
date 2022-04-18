@@ -12,7 +12,7 @@ const Header = () => {
         <div className="mx-4">||||</div>
         <a className="underline underline-offset-1" href="/connect">Connect</a>
       </nav>
-      <div className="fixed left-0 z-40 overflow-x-hidden">
+      <div className="fixed left-0 z-40 overflow-x-hidden header">
         <img src={`${process.env.PUBLIC_URL}/img/nav-QLRXPLVY.svg`} className="nav-img" alt=""/>
       </div>
       <img src={`${process.env.PUBLIC_URL}/img/logo-FDOECSF6.svg`} className="nav-logo fixed w-16 z-40" alt="logo"></img>

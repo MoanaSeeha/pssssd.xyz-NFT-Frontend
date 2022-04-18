@@ -6,13 +6,15 @@ body {
 }
 
 .header {
-  animation: header-width-animation 2s 1s forwards;
+  /* animation: header-width-animation 2s 1s forwards; */
+  animation: header-width-animation 3s 0s forwards;
 }
 
 .nav {
   top: 1.5rem;
   font-size: 1em;
   color: white;
+  animation: animation-fade-in 6s 0s forwards;
 }
 
 .nav-img {
@@ -27,13 +29,22 @@ body {
   animation: rotation 16s infinite linear;
 }
 
-.animation-fade-in {
-  animation: animation-fade-in 1s;
-}
-
 .containerr {
   margin: 0;
   line-height: inherit;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #ff6464;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+
+.heading {
+  animation: animation-fade-in 7s 0s forwards;
 }
 
 .hero-heading {
@@ -53,6 +64,16 @@ body {
 
 .lf-player-container {
   width: 100%;
+  height: 100%;
+}
+
+.hero-lottie {
+  width: 85vw;
+  height: 85vw;
+}
+
+.hero-lottie img {
+  animation: animation-zoom-out 4s forwards;
 }
 
 .banner {
@@ -64,16 +85,19 @@ body {
 .banner-pink {
   left: -32rem;
   top: 6rem;
+  animation: transformX 4s forwards;
 }
 
 .banner-green {
   left: -35rem;
   top: 20rem;
+  animation: transformX 5.5s forwards;
 }
 
 .banner-orange {
   left: -25rem;
   top: 21rem;
+  animation: transformX 5s forwards;
 }
 
 .section-beige {
@@ -98,6 +122,22 @@ body {
   font-size: 1rem;
 }
 
+.barcode {
+  width: 9rem;
+  float: none;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 1.5rem;
+  opacity: 0.5;
+}
+
+.link-banner {
+  border-top: 1px solid #222123;
+  background-color: #f4bcf9;
+  color: #222123;
+  z-index: 100;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -108,20 +148,56 @@ body {
 }
 
 @keyframes header-width-animation {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  30% {
+    width: 0;
+  }
+  100% {
     width: 100%;
   }
 }
 
 @keyframes animation-fade-in {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  30% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
+  }
+}
+
+@keyframes transformX {
+  0% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-zoom-out {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(0);
+  }
+  97% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -158,6 +234,10 @@ body {
   .hero {
     min-height: 460px;
   }
+  .hero-lottie {
+    width: 350px;
+    height: 350px;
+}
 }
 
 @media (min-width: 1024px) {
@@ -176,6 +256,10 @@ body {
   }
   .hero {
     min-height: 600px;
+  }
+  .hero-lottie {
+    width: 480px;
+    height: 480px;
   }
 }
 
@@ -202,12 +286,15 @@ body {
 }
 
 @media (min-width: 1536px) {
-  .banner-green,
-  .banner-orange {
-    top: auto;
-    bottom: -100px;
-  }
   .hero {
     max-height: 80vh;
+  }
+  .hero-lottie {
+    width: 75vh;
+    height: 75vh;
+    min-width: 410px;
+    min-height: 410px;
+    max-height: 700px;
+    max-width: 700px;
   }
 }
