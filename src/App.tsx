@@ -2,7 +2,7 @@
 import React from "react";
 
 import "./App.css";
-import Header from "./pages/layout/header";
+import Header from "./pages/header";
 
 import Router from "./router";
 

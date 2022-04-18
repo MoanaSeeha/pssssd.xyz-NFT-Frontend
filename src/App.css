@@ -1,5 +1,8 @@
-* {
-  font-family: 'Poppins';
+body {
+  background: #222123;
+  color: #eee3de;
+  background: #222123;
+  font-size: 12px;
 }
 
 .header {
@@ -12,18 +15,175 @@
   color: white;
 }
 
+.nav-img {
+  top: -51px;
+  position: fixed;
+  width: 100%;
+  height: 300px;
+  max-width: none;
+  overflow: hidden;
+}
+
 .nav-logo {
   top: 2rem;
   left: 2rem;
   animation: rotation 16s infinite linear;
 }
 
+.containerr {
+  margin: 0;
+  line-height: inherit;
+}
+
+.hero-heading {
+  font-family: 'Big Shoulders Display';
+  font-size: 7rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.super {
+  font-family: "Big Shoulders Display";
+  vertical-align: top;
+  top: 1.25rem;
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.lf-player-container {
+  width: 100%;
+}
+
+.banner {
+  max-width: none;
+  position: absolute;
+  width: 1250px;
+}
+
+.banner-pink {
+  left: -32rem;
+  top: 6rem;
+}
+
+.banner-green {
+  left: -35rem;
+  top: 20rem;
+}
+
+.banner-orange {
+  left: -25rem;
+  top: 21rem;
+}
+
+.section-beige {
+  background-color: #efe3da;
+  color: #222123;
+}
+
+.section-beige h2 {
+  font-family: "Big Shoulders Display";
+  font-size: 14rem;
+  margin-top: -3rem;
+  padding-left: 2rem;
+}
+
 @keyframes rotation {
-  from { transform: rotate(0deg); } 
-  to { transform: rotate(359deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 @keyframes header-width-animation {
-  from {width: 0;}
-  to {width: 100%;}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+
+@media (min-width: 640px) {
+  .banner-green {
+    left: -20rem;
+    top: 25rem;
+  }
+  .banner-orange {
+    top: 27rem;
+  }
+  .hero-heading {
+    font-size: 5rem;
+  }
+  .super {
+    top: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-pink {
+    left: -11rem;
+    top: 4rem;
+  }
+  .banner-green {
+    left: -18rem;
+    top: 26rem;
+  }
+  .hero-heading {
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .hero {
+    min-height: 460px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-green {
+    left: -10rem;
+    top: 32rem;
+  }
+  .banner {
+    width: 1500px;
+  }
+  .hero-heading {
+    font-size: 6.5rem;
+  }
+  .super {
+    top: 1.75em;
+  }
+  .hero {
+    min-height: 600px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .banner-green {
+    left: -20%;
+  }
+  .banner {
+    width: 150%;
+  }
+  .hero-heading {
+    font-size: 7rem;
+  }
+  .super {
+    top: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .banner-green,
+  .banner-orange {
+    top: auto;
+    bottom: -100px;
+  }
+  .hero {
+    max-height: 80vh;
+  }
 }
